@@ -1,12 +1,14 @@
-import { fetchUsers } from "../api/weatherApi.js";
+import { getUsers } from "../api/weatherApi.js";
 
-// Loop to display all of the comments:
-data.forEach(user => {
-    const comment = `<li>${user.body} </li>`;
-    document.querySelector('#comments').insertAdjacentHTML('beforeend', comment);
-})  
+const getComments = async () => {
+  const data = await getUsers;
+  console.log(data);
+  data.forEach((user) => {
+    const comment = `<li>${user.body}</li>`;
+    console.log(comment);
 
-fetchUsers();
+    document.querySelector("ul").insertAdjacentHTML("beforeend", comment);
+  });
+};
 
-
-
+getComments();

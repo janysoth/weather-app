@@ -13,7 +13,7 @@ const url = "https://jsonplaceholder.typicode.com/posts/1/comments";
 //         })
 //     })
 
-//Asynchronous IIFEs
+// Asynchronous IIFEs
 export const getUsers = (async () => {
   async function fetchUsers() {
     const response = await fetch(url);
