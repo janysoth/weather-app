@@ -14,9 +14,25 @@ const url =
 //         })
 //     })
 
-export async function fetchUsers() {
-    const response = await fetch(url);
-    const data = await response.json();
+// export async function fetchUsers() {
+//     const response = await fetch(url);
+//     const data = await response.json();
     
-    return data;
-}
+//     return data;
+// }
+
+const axios = require('axios');
+
+const getUsers = (async () => {
+    async function fetchUsers () {
+        const data = await axios.get(url)
+            .then((response => response.data))
+            .catch((err) => console.log(err));
+        return data;
+    }
+    return {
+        array: await fetchUsers()
+    }
+})();
+
+module.exports = getUsers;
