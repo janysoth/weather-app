@@ -25,3 +25,6 @@ export const getUsers = (async () => {
     array: await fetchUsers(),
   };
 })();
+
+
+

@@ -1,14 +1,19 @@
 import { getUsers } from "../api/weatherApi.js";
 
-const getComments = async () => {
+(async () => {
   const data = await getUsers;
   console.log(data);
+
   for (i = 0; i < data.length; i++) {
     const comment = `<li>${user.body}</li>`;
     document.querySelector("ul").insertAdjacentHTML("beforeend", comment);
   }
-};
+})();
 
-getComments();
+//getComments();
 
-//document.querySelector("ul").insertAdjacentHTML("beforeend", comment);
+  // data.forEach((user) => {
+  //   const comment = `<li>${user.body}</li>`;
+
+  //   document.querySelector("ul").insertAdjacentHTML("beforeend", comment);
+  // });
