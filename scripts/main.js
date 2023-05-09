@@ -5,9 +5,11 @@ import { getUsers } from "../api/weatherApi.js";
   console.log(data);
 
   for (let i = 0; i < data.length; i++) {
-    const comment = `<li>${user.body}</li>`;
-    document.querySelector("ul").insertAdjacentHTML("beforeend", comment);
+    const comment = `<li>${data.body}</li>`;
+    console.log(comment);
+    // document.querySelector("ul").insertAdjacentHTML("beforeend", comment);
   }
+
 })();
 
 //getComments();
