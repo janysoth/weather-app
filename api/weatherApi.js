@@ -14,17 +14,27 @@ const url = "https://jsonplaceholder.typicode.com/posts/1/comments";
 //     })
 
 // Asynchronous IIFEs
-export const getUsers = (async () => {
-  async function fetchUsers() {
-    const response = await fetch(url);
-    const data = await response.json();
+// export const getUsers = (async () => {
+//   async function fetchUsers() {
+//     const response = await fetch(url);
+//     const data = await response.json();
 
-    return data;
-  }
-  return {
-    array: await fetchUsers(),
-  };
-})();
+//     return data;
+//   }
+//   return {
+//     array: await fetchUsers(),
+//   };
+// })();
+
+export const getUsers = async () => {
+  const response = await fetch(url);
+  const data = await response.json();
+
+  return data;
+};
+
+
+
 
 
 
