@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-</head>
+    <!-- Other meta tags and stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-    <h1>Comments</h1>
-    <ul id="comments"></ul>
-    <script type='module' src="../scripts/main.js"></script>
-</body>
-
+  <body>
+    <div class="container">
+      <div class="top-section">
+        <input
+          type="text"
+          placeholder="Search for the city here..."
+          class="search-box"
+        />
+        <div class="location">Austin, MN 55912</div>
+      </div>
+      <div class="left-section">
+        <div class="temp-icon">
+          <i class="fas fa-sun"></i>
+          <!-- Replace "fa-sun" with the appropriate weather icon class -->
+        </div>
+        <div class="temp-description">Clear</div>
+      </div>
+      <div class="right-section">
+        <div class="temp-details">
+          <div>
+            <span class="win">Wind: 9 mph</span>
+            <span class="precip">Precip: 0 inch</span>
+            <span class="pressure">Pressure: 1017 mb</span>
+          </div>
+          <span class="current-temp">22°F</span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../scripts/main.js"></script>
+  </body>
 </html>
