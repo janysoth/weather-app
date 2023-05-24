@@ -9,6 +9,11 @@
   border-radius: 5px; /* Optional: Add border radius */
 }
 
+.location {
+  font-size: 2rem;
+  justify-content: center;
+}
+
 
 .top-section {
   display: flex;
