@@ -58,6 +58,13 @@ input {
   padding: 1rem;
 }
 
+.current-temp-icon {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+
 #day-icon, #current-icon{
   font-size: 2rem;
 }

@@ -11,14 +11,14 @@ import { getUsers } from "../api/weatherApi.js";
 //   });
 // })();
 
-// Replace 'YOUR_API_KEY' with your actual API key
-const apiKey = 'd5d4f9caa31dc0bc654d876b1d629d6e';
+const apiKey = "d5d4f9caa31dc0bc654d876b1d629d6e";
 
 // Select HTML elements
 const searchBox = document.querySelector(".search-box");
 const locationElement = document.querySelector(".location");
 const tempDescription = document.querySelector(".temp-description");
 const tempDetails = document.querySelector(".temp-details");
+const tempIconElement = document.querySelector(".current-temp-icon > div");
 
 // Event listener for search box input
 searchBox.addEventListener("keypress", (event) => {
@@ -40,6 +40,11 @@ async function getWeatherData(city) {
     // Update HTML elements with weather data
     locationElement.textContent = `${data.name}, ${data.sys.country}`;
     tempDescription.textContent = data.weather[0].description;
+
+    
+    const weatherIcon = getWeatherIcon(data.weather[0].icon);
+    tempIconElement.className = `fas ${weatherIcon}`;
+
     tempDetails.innerHTML = `
       <span class="win">Wind: ${data.wind.speed} mph</span>
       <span class="precip">Precip: ${
@@ -86,7 +91,9 @@ async function getDailyForecast(city) {
       // Update day of the week
       const date = new Date(day.dt * 1000);
       const options = { weekday: "short" };
-      dayOfWeekElement.textContent = date.toLocaleDateString("en-US", options).toUpperCase();
+      dayOfWeekElement.textContent = date
+        .toLocaleDateString("en-US", options)
+        .toUpperCase();
 
       // Update weather icon
       const weatherIcon = getWeatherIcon(day.weather[0].icon);
@@ -133,10 +140,3 @@ function getWeatherIcon(iconCode) {
   // Return a default icon class if no match is found
   return "fa-question";
 }
-
-
-
-
-
-
-
