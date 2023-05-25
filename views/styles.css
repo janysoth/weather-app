@@ -41,16 +41,22 @@ body {
 }
 
 .left-section {
-  align-items: flex-start; /* Align items to the top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .middle-section {
   font-size: 2rem;
   text-align: center;
+  justify-content: center;
 }
 
 .right-section {
   text-align: right;
+  justify-content: center;
 }
 
 .fa-sun,
@@ -95,8 +101,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
+  padding-bottom: 1rem;
 }
 
 #day-icon,
