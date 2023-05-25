@@ -23,6 +23,13 @@ body {
   text-align: center;
 }
 
+.current-date-time {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
 .current-temp-details {
   display: flex;
   justify-content: space-between;

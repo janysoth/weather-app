@@ -131,3 +131,16 @@ function getWeatherIcon(iconCode) {
   // Return a default icon class if no match is found
   return "fa-question";
 }
+
+// Function to get current date and time
+function getCurrentDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+  return now.toLocaleDateString('en-US', options);
+}
+
+// Update HTML elements with weather data
+const currentDateTimeElement = document.querySelector(".current-date-time");
+currentDateTimeElement.innerHTML = getCurrentDateTime();
+
+
