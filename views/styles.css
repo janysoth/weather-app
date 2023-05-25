@@ -1,37 +1,70 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  width: 300px;
-  margin: 0 auto;
-  padding: 50px;
+  max-width: 500px;
+  margin: 150px auto; /* Center the container horizontally and add top/bottom margin for spacing */
+  background-color: lightskyblue;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #ccc; /* Add border style */
-  border-radius: 5px; /* Optional: Add border radius */
 }
 
 .location {
   font-size: 2rem;
-  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
+.current-temp-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
 
-.top-section {
+.left-section,
+.middle-section,
+.right-section {
+  width: 33.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .left-section {
-  margin-right: auto;
-  margin-left: -10px;
-  text-align: left;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.middle-section {
+  font-size: 2rem;
+  text-align: center;
 }
 
 .right-section {
-  margin-left: auto;
   text-align: right;
-  margin-top: -60px;
+}
+
+.fa-sun,
+.fa-moon,
+.fa-cloud-sun,
+.fa-cloud-moon,
+.fa-cloud,
+.fa-cloud-showers-heavy,
+.fa-cloud-sun-rain,
+.fa-cloud-moon-rain,
+.fa-bolt,
+.fa-snowflake,
+.fa-smog {
+  color: goldenrod;
 }
 
 input {
@@ -61,24 +94,21 @@ input {
 .current-temp-icon {
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  align-items: center;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
 }
 
-
-#day-icon, #current-icon{
+#day-icon,
+#current-icon {
   font-size: 2rem;
-}
-
-.temp-icon i {
-  font-size: 32px; /* Adjust the icon size as needed */
-  margin-right: 10px; /* Add spacing between the icon and description */
 }
 
 .daily-forecast {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
 }
 
 .day {
@@ -91,10 +121,11 @@ input {
 
 .day-of-week {
   font-weight: bold;
-  margin-bottom: 1rem; /* Add margin bottom for spacing */
+  margin-bottom: 1rem;
 }
 
 .day-temp {
-  font-size: 14px;
-  margin-top: 1rem; /* Add margin top for spacing */
+  font-size: 20px;
+  margin-top: 1rem;
+  font-weight: bold;
 }
