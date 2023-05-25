@@ -29,7 +29,6 @@ body {
   text-align: center;
 }
 
-
 .current-temp-details {
   display: flex;
   justify-content: space-between;
@@ -109,11 +108,36 @@ input {
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
+
+  animation-name: spin; /* Name of the animation keyframes */
+  animation-duration: 5s; /* Duration of the animation */
+  animation-iteration-count: infinite; /* Number of times the animation should repeat (infinite for continuous animation) */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Initial rotation */
+  }
+  to {
+    transform: rotate(360deg); /* Final rotation */
+  }
 }
 
 #day-icon,
 #current-icon {
   font-size: 2rem;
+  animation-name: spin; /* Name of the animation keyframes */
+  animation-duration: 5s; /* Duration of the animation */
+  animation-iteration-count: infinite; /* Number of times the animation should repeat (infinite for continuous animation) */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Initial rotation */
+  }
+  to {
+    transform: rotate(360deg); /* Final rotation */
+  }
 }
 
 .daily-forecast {
